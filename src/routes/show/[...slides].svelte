@@ -28,7 +28,7 @@
 	export let slides = []
 
 	let slide0 = 'titulo'
-	let title = `StringShow - ${slide0}`
+	let title = `PresentURL - ${slide0}`
 	let ogImage = `https://cdn.statically.io/og/${title}.jpg`
 
 	onMount(()=>{

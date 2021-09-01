@@ -15,7 +15,7 @@
   	<div>Made with <a href="https://kit.svelte.dev" target="_blank" rel="nofollow noopener">SvelteKit</a>, and <a  href="https://tailwindcss.com" target="_blank" rel="nofollow noopener">TailwindCss</a></div>
 
   	<div>
-      Si te 💓 StringShow sigueme en <a href="https://twitter.com/sotoplatero" class="text-blue-500" target="_blank" rel="me">@sotoplatero</a> para más proyectos.
+      Si te 💓 PresentURL sigueme en <a href="https://twitter.com/sotoplatero" class="text-blue-500" target="_blank" rel="me">@sotoplatero</a> para más proyectos.
     </div>
   </footer>
 

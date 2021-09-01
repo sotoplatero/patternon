@@ -11,7 +11,7 @@
 
 	<div class="mb-16">
 		<h2>¿Cómo funciona?</h2>
-		<p>El servicio funciona en dirección <code>/show</code>. Luego solo escribes el texto de cada diapositiva separadas por <code>/</code> como en una url. Y lo bueno que además del texto StringShow utiliza un formato con el cual puedes incluir el título de la diapositiva, cuentas de twitter y direcciones url, muy divertido. Un ejemplo para aclarar dudas:</p>
+		<p>El servicio funciona en dirección <code>/show</code>. Luego solo escribes el texto de cada diapositiva separadas por <code>/</code> como en una url. Y lo bueno que además del texto PresentURL utiliza un formato con el cual puedes incluir el título de la diapositiva, cuentas de twitter y direcciones url, muy divertido. Un ejemplo para aclarar dudas:</p>
 		<a href="/show/diapositiva-1/diapositiva-2/diapositiva-3" target="_blank" class="link">☛ /show/diapositiva-1/diapositiva-2/diapositiva-3</a>		
 	</div>
 
@@ -21,8 +21,8 @@
 				✨ Títulos de las Diapositivas
 			</h3>
 			<p>Puedes incluir un título a las diapositivas escribiendolo al inicio del texto de la diapositiva y terminado con un punto.</p>
-			<a href="/show/titulo-del-slide.el-texto-inicial-terminado-con-punto-sera-asumido-como-titulo" target="_blank" class="link">☛ 
-				/show/titulo-del-slide.el-texto-inicial-terminado-con-punto-sera-asumido-como-titulo
+			<a href="/show/titulo-del-slide|el-texto-inicial-terminado-con-punto-sera-asumido-como-titulo" target="_blank" class="link">☛ 
+				/show/titulo-del-slide|el-texto-inicial-terminado-con-punto-sera-asumido-como-titulo
 			</a>
 		</div>
 
@@ -38,7 +38,7 @@
 			<h3>
 				⚽ Color y patrón de fondo aleatorio
 			</h3>
-			<p>StringShow use random color from <a href="https://tailwindcss.com/docs/">Tailwind Pallete</a> and pattern from <a href="https://www.heropatterns.com/">heropatterns</a></p>
+			<p>PresentURL use random color from <a href="https://tailwindcss.com/docs/">Tailwind Pallete</a> and pattern from <a href="https://www.heropatterns.com/">heropatterns</a></p>
 		</div>
 
 		<div class="">
@@ -52,7 +52,7 @@
 			<h3>
 				✋ Funciona como una Página Web
 			</h3>
-			<p>Puedes usar StringShow como una pagina web. Tiene título y meta imagen personalizado asi que puedes compartir en redes sociales. <a href="https://cards-dev.twitter.com/validator">Mira como se veria en twitter</a></p>
+			<p>Puedes usar PresentURL como una pagina web. Tiene título y meta imagen personalizado asi que puedes compartir en redes sociales. <a href="https://cards-dev.twitter.com/validator">Mira como se veria en twitter</a></p>
 		</div>
 
 	</div>
