@@ -1,6 +1,6 @@
 <main>
 	<header class="py-28">
-		
+
 		<h1 class="font-extrabold text-gray-800 text-4xl sm:text-6xl tracking-tighter mb-2">
 			Crea <br>divertidas <span class="text-pink-700">presentaciones</span><br> desde la <span class="text-pink-700">URL</span>
 		</h1>
@@ -52,7 +52,7 @@
 
 		<div class="">
 			<h3>Negritas, cursivas</h3>
-			<p>Solo utiliza el fomato de markdown: entre doble asterisco para <strong>**negritas**</strong>, entre asteriscos para cursivas <em>*cursivas*</em></p>
+			<p>Solo utiliza el fomato de markdown: entre doble asterisco para <strong>**negritas**</strong>, entre asteriscos sencillos para <em>*cursivas*</em></p>
 			<p>
 				<a href="/show/decora el texto con **negritas** y *cursivas* e incluye code si eres " target="_blank" class="link">/show/Incluye tu cuenta en twitter escribiendo tu usuario @sotoplatero</a>
 			</p>			
@@ -70,9 +70,6 @@
 	h2{ @apply text-3xl text-gray-800 font-bold mb-2; }
 	h3{ @apply text-xl text-gray-800 font-semibold mb-2; }
 	p{ @apply text-lg text-gray-700 mt-2; }
-	a {
-		@apply text-blue-600;
-	}
 	code{ @apply bg-gray-100 px-3 font-mono; }
 	pre { 
 		@apply bg-gray-100 p-2 border-l-4 border-yellow-400 font-mono mt-2; 

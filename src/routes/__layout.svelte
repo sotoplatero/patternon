@@ -6,7 +6,7 @@
 	<a href="/">
 		<h1 class="text-xl sm:text-3xl py-4 font-bold flex items-center">
 			<img src="/logo.png" class="w-10 h-10 rounded-md mr-2" alt="">	
-			<span class="">Pesent<span class="text-pink-700 font-extrabold">URL</span></span>
+			<span class="text-gray-700">Present</span><span class="text-pink-700 font-extrabold">URL</span>
 		</h1>
 	</a>
 
