@@ -61,7 +61,7 @@
 
 	<div class="text-center my-20 p-8 bg-blue-100">
 		<h2>Funciona como una Página Web</h2>
-		<p>Puedes usar PresentURL como una pagina web. Tiene título y meta imagen personalizado asi que puedes compartir en redes sociales. <a href="https://cards-dev.twitter.com/validator">Mira como se veria en twitter</a></p>
+		<p>Puedes usar PresentURL como una página web. Se personaliza el título y la imagen con el texto de la primera diapositiva así que puedes compartir tu presentación en redes sociales. Revisa  como se veria en el validador de <a href="https://cards-dev.twitter.com/validator">Twitter</a></p>
 	</div>
 
 </main>
