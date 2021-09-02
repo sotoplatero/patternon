@@ -3,33 +3,27 @@
 	import getPattern from '$lib/pattern'
     export async function load({page, fetch}) {
 
-		let slides = page.params
-			.slides
-			.replace(/\-/g,' ')
-			.split('/')
-			.map( el => formatSlide(el))
+    	let slides = page.params.slides.replace(/\-/g,' ').split('/')
+    	const title = slides[0]
+		slides = slides.map( el => formatSlide(el))
+
+		const pattern = getPattern()
 
 		return {
-			props: { 
-				pattern: getPattern(),
-				slides,
-			}
+			props: { pattern, slides, title }
 		}
 
     }	
 </script>
 <script>
 	import './_slide.postcss'
-	import {onMount} from 'svelte'
+	import { onMount } from 'svelte'
 	import { page } from '$app/stores'
 	import Partner from './_partner.svelte'
 
+	export let title
 	export let pattern
 	export let slides = []
-
-	let slide0 = 'titulo'
-	let title = `PresentURL - ${slide0}`
-	let ogImage = `https://cdn.statically.io/og/${title}.jpg`
 
 	onMount(()=>{
 		document.body.addEventListener("keyup", (e) => {
@@ -40,21 +34,28 @@
 		document.body.focus()
 	})
 
+	let hasPrev = false
+	let hasNext = true
 	function prev() {
 	    let activeSlide = document.querySelector('.translate-x-0');
-	    let previousSlide = activeSlide.previousSibling;
-	    if (!!previousSlide) {
+	    let prevSlide = activeSlide.previousSibling;
+	    hasPrev = !!prevSlide.previousSibling
+	    hasNext = !!prevSlide.nextSibling
+
+	    if (!!prevSlide) {
 		    activeSlide.classList.remove('translate-x-0');
 		    activeSlide.classList.add('translate-x-full');
 
-		    previousSlide.classList.remove('-translate-x-full');
-		    previousSlide.classList.add('translate-x-0');
+		    prevSlide.classList.remove('-translate-x-full');
+		    prevSlide.classList.add('translate-x-0');
 	    }
 	}
 
 	function next() {
 	    let activeSlide = document.querySelector('.translate-x-0');;
 	    let nextSlide = activeSlide.nextSibling;
+	    hasPrev = !!nextSlide.previousSibling
+	    hasNext = !!nextSlide.nextSibling
 
 	    if (!!nextSlide) {
 		    activeSlide.classList.remove('translate-x-0');
@@ -64,6 +65,8 @@
 		    nextSlide.classList.add('translate-x-0');
 	    }
 	}
+
+	const ogImage = `https://cdn.statically.io/og/${title}.jpg`
 
 </script>
 
@@ -85,5 +88,15 @@
 			</div>
 		{/each}
 	</div>
+	{#if hasPrev}
+		<button on:click={prev} class="absolute top-[50%] left-4 text-6xl text-white opacity-40 hover:opacity-75">
+			&larr;
+		</button>
+	{/if}
+	{#if hasNext}
+		<button on:click={next} class="absolute top-[50%] right-4 text-6xl text-white opacity-40 hover:opacity-75">
+			&rarr;
+		</button>
+	{/if}
 	<Partner class="absolute bottom-0 left-0 w-full m-2"/>
 </div>
