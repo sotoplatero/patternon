@@ -1,71 +1,82 @@
 <main>
-	<header class="py-24">
+	<header class="py-28">
 		<h1 class="font-extrabold text-gray-800 text-4xl sm:text-6xl tracking-tighter mb-2">
-			Crea <br>divertidas <span class="text-pink-700">presentaciones</span><br> solo con la URL
+			Crea <br>divertidas <span class="text-pink-700">presentaciones</span><br> desde la <span class="text-pink-700">URL</span>
 		</h1>
 		<div class="text-xl sm:text-3xl font-medium text-gray-500 leading-relaxed">Puedes usarlo en la presentación de <span class="font-bold">nuevos productos</span>, para escribir un <span class="font-bold">mini-tutorial</span>, compartir una <span class="font-bold">historia corta</span> o your favorite <span class="font-bold">recipe</span></div>
-		<a href="/" target="_blank" class="mt-8 text-pink-700 inline-block text-3xl font-extrabold">
+<!-- 		<a href="/" target="_blank" class="mt-8 text-pink-700 inline-block text-3xl font-extrabold">
 			Demo &rarr;
-		</a>
+		</a> -->
 	</header>
 
 	<div class="mb-16">
 		<h2>¿Cómo funciona?</h2>
-		<p>El servicio funciona en dirección <code>/show</code>. Luego solo escribes el texto de cada diapositiva separadas por <code>/</code> como en una url. Y lo bueno que además del texto PresentURL utiliza un formato con el cual puedes incluir el título de la diapositiva, cuentas de twitter y direcciones url, muy divertido. Un ejemplo para aclarar dudas:</p>
-		<a href="/show/diapositiva-1/diapositiva-2/diapositiva-3" target="_blank" class="link">☛ /show/diapositiva-1/diapositiva-2/diapositiva-3</a>		
+		<p>El servicio funciona sobre las dirección <code>/show</code> y el texto de cada diapositiva separado por slash <code>/</code>, como en una url, ejemplo:</p>
+		<p>
+			<a href="/show/diapositiva 1/diapositiva 2/diapositiva 3" target="_blank" class="link">/show/diapositiva 1/diapositiva 2/diapositiva 3</a>
+		</p>
 	</div>
 
-	<div class="space-y-12">
+	<div class="mb-8">
+		<h2>Formato</h2>
+		<p>PresentURL utiliza un formato tomando como base el markdown para poder tener Títulos, <strong>negritas</strong>, <em>inclinadas</em>, cuentas de Twitter, enlaces y listas.</p>
+		<p>Utiliza el carácter <code>|</code> como separador de lineas dentro de una diapositiva</p>
+		<a href="/show/titulo|incluye **negritas**|utiliza *inclinadas*/titulo 2|promociona tu @cuenta en Twitter|puedes agregar un enlace a tu dominio.com" target="_blank" class="link">/show/titulo|incluye **negritas**|utiliza *inclinadas*/titulo 2|promociona tu @cuenta en Twitter|puedes agregar un enlace a tu dominio.com</a>
+	</div>
+
+	<div class="space-y-8">
 		<div class="">
-			<h3>
-				✨ Títulos de las Diapositivas
-			</h3>
-			<p>Puedes incluir un título a las diapositivas escribiendolo al inicio del texto de la diapositiva y terminado con un punto.</p>
-			<a href="/show/titulo-del-slide|el-texto-inicial-terminado-con-punto-sera-asumido-como-titulo" target="_blank" class="link">☛ 
-				/show/titulo-del-slide|el-texto-inicial-terminado-con-punto-sera-asumido-como-titulo
-			</a>
+			<h3>Título</h3>
+			<p>Utilizando el separador <code>|</code> puedes añadir las lineas que necesites. La primera de esas lineas dentro de una diapositiva será tomada como el Tiulo.</p>
+			<p>
+				<a href="/show/titulo de la diapositiva|es la primera línea de la diapositiva" target="_blank" class="link"> 
+					/show/titulo de la diapositiva|es la primera línea de la diapositia
+				</a>
+			</p>
 		</div>
 
 		<div class="">
-			<h3>
-				✈ Incluye tu cuenta en Twitter
-			</h3>
-			<p>Solo incluya el nombre de tu cuenta en Twitter comenzando por @</p>
-			<a href="/show/Your-Twitter.incluye-tu-cuenta-en-twitter-@sotoplatero" target="_blank" class="link">/show/Your-Twitter.incluye-tu-cuenta-en-twitter-@sotoplatero</a>
+			<h3>Cuenta en Twitter</h3>
+			<p>Si escribes tu cuenta a twitter iniciando con @ se creará un enlace a tu perfil</p>
+			<p>
+				<a href="/show/Incluye tu cuenta en twitter escribiendo tu usuario @sotoplatero" target="_blank" class="link">/show/Incluye tu cuenta en twitter escribiendo tu usuario @sotoplatero</a>
+			</p>
 		</div>
 
 		<div class="">
-			<h3>
-				⚽ Color y patrón de fondo aleatorio
-			</h3>
-			<p>PresentURL use random color from <a href="https://tailwindcss.com/docs/">Tailwind Pallete</a> and pattern from <a href="https://www.heropatterns.com/">heropatterns</a></p>
+			<h3>Enlaces</h3>
+			<p>Puedes incluir tus enlaces pero solo a un dominio es decir puedes publicar tu <em>dominio.com</em> pero no a <em>dominio.com/about</em></p>
+			<p>
+				<a href="/show/comparte tu sitio web ej: cssfindes.xyz en cualquier diapositiva" target="_blank" class="link">/show/comparte el enlace a tu sitio web ej: cssfindes.xyz en cualquier diapositiva</a>
+			</p>
 		</div>
 
 		<div class="">
-			<h3>
-				☕ Use Emojis
-			</h3>
-			<p></p>
+			<h3>Negritas, cursivas</h3>
+			<p>Solo utiliza el fomato de markdown: entre doble asterisco para <strong>**negritas**</strong>, entre asteriscos para cursivas <em>*cursivas*</em></p>
+			<p>
+				<a href="/show/decora el texto con **negritas** y *cursivas* e incluye code si eres " target="_blank" class="link">/show/Incluye tu cuenta en twitter escribiendo tu usuario @sotoplatero</a>
+			</p>			
 		</div>
+	</div>
 
-		<div class="">
-			<h3>
-				✋ Funciona como una Página Web
-			</h3>
-			<p>Puedes usar PresentURL como una pagina web. Tiene título y meta imagen personalizado asi que puedes compartir en redes sociales. <a href="https://cards-dev.twitter.com/validator">Mira como se veria en twitter</a></p>
-		</div>
-
+	<div class="text-center my-20 p-8 bg-blue-100">
+		<h2>Funciona como una Página Web</h2>
+		<p>Puedes usar PresentURL como una pagina web. Tiene título y meta imagen personalizado asi que puedes compartir en redes sociales. <a href="https://cards-dev.twitter.com/validator">Mira como se veria en twitter</a></p>
 	</div>
 
 </main>
 
 <style>
 	h2{ @apply text-3xl text-gray-800 font-bold mb-2; }
-	h3{ @apply text-2xl text-gray-800 font-bold mb-2; }
-	p{ @apply text-lg text-gray-700; }
-	.link {
-		@apply text-blue-600 inline-block mt-1;
+	h3{ @apply text-xl text-gray-800 font-semibold mb-2; }
+	p{ @apply text-lg text-gray-700 mt-2; }
+	a {
+		@apply text-blue-600;
 	}
-	code{ @apply bg-gray-100 px-2 font-mono; }
+	code{ @apply bg-gray-100 px-3 font-mono; }
+	pre { 
+		@apply bg-gray-100 p-2 border-l-4 border-yellow-400 font-mono mt-2; 
+	}
 </style>
 

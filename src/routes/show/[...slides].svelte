@@ -75,10 +75,10 @@
 	<meta property="twitter:image" content="{ogImage}" />
 </svelte:head>
  
-<div class="slides relative w-screen h-screen overflow-hidden" >
-	<div class="slides">
+<div class="slides relative w-screen h-screen overflow-hidden " style={pattern}>
+	<div class="slides"  >
 		{#each slides as slide, index (slide)}
-		    <div class="slide absolute inset-0 w-screen h-screen text-white flex items-center justify-center px-20 sm:px-40 transition-all ease-in-out duration-1000 transform text-3xl sm:text-5xl leading-snug { !index ? 'translate-x-0' : 'translate-x-full'} " style={pattern} >
+		    <div class="slide absolute inset-0 w-screen h-screen text-white flex items-center justify-center px-20 sm:px-40 transition-all ease-in-out duration-1000 transform text-3xl sm:text-5xl leading-snug bg-transparent { !index ? 'translate-x-0' : 'translate-x-full'} " >
 		    	<div class="">
 			    	{@html slide}
 		    	</div>

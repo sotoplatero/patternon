@@ -11,11 +11,11 @@
 
 	<slot />
 
-  <footer class="mt-24 mb-12 text-center font-mono space-y-6">
-  	<div>Made with <a href="https://kit.svelte.dev" target="_blank" rel="nofollow noopener">SvelteKit</a>, and <a  href="https://tailwindcss.com" target="_blank" rel="nofollow noopener">TailwindCss</a></div>
+  <footer class="mt-24 mb-12 text-sm text-center font-mono space-y-6">
+  	<div>Hecho con <a href="https://kit.svelte.dev" target="_blank" rel="nofollow noopener">SvelteKit</a>, <a href="https://tailwindcss.com" target="_blank" rel="nofollow noopener">Tailwind</a> y <a href="https://www.heropatterns.com/">heropatterns</a></div>
 
   	<div>
-      Si te 💓 PresentURL sigueme en <a href="https://twitter.com/sotoplatero" class="text-blue-500" target="_blank" rel="me">@sotoplatero</a> para más proyectos.
+      Si te 💓 PresentURL prueba <a href="htps://cssfinder">CSSFinde</a> y sigueme en <a href="https://twitter.com/sotoplatero" class="text-blue-500" target="_blank" rel="me">@sotoplatero</a> para más proyectos e ideas locas.
     </div>
   </footer>
 
