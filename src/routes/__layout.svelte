@@ -2,12 +2,13 @@
 	import '../app.postcss';
 </script>
 <div class="max-w-screen-md mx-auto w-full px-2">
-<!-- 	<a href="/">
-		<h1 class="text-xl sm:text-3xl text-center py-4 font-bold flex items-center justify-center">
+
+	<a href="/">
+		<h1 class="text-xl sm:text-3xl py-4 font-bold flex items-center">
 			<img src="/logo.png" class="w-10 h-10 rounded-md mr-2" alt="">	
-			<span class="">String<span class="text-indigo-600 font-extrabold">Show</span></span>
+			<span class="">Pesent<span class="text-pink-700 font-extrabold">URL</span></span>
 		</h1>
-	</a> -->
+	</a>
 
 	<slot />
 

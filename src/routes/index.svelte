@@ -1,12 +1,11 @@
 <main>
 	<header class="py-28">
+		
 		<h1 class="font-extrabold text-gray-800 text-4xl sm:text-6xl tracking-tighter mb-2">
 			Crea <br>divertidas <span class="text-pink-700">presentaciones</span><br> desde la <span class="text-pink-700">URL</span>
 		</h1>
-		<div class="text-xl sm:text-3xl font-medium text-gray-500 leading-relaxed">Puedes usarlo en la presentación de <span class="font-bold">nuevos productos</span>, para escribir un <span class="font-bold">mini-tutorial</span>, compartir una <span class="font-bold">historia corta</span> o your favorite <span class="font-bold">recipe</span></div>
-<!-- 		<a href="/" target="_blank" class="mt-8 text-pink-700 inline-block text-3xl font-extrabold">
-			Demo &rarr;
-		</a> -->
+		<div class="text-xl sm:text-3xl font-medium text-gray-500 leading-relaxed">Haz una presentación de tu <span class="font-bold">nuevo producto</span>, escribe un <span class="font-bold">mini-tutorial</span>, comparte una <span class="font-bold">historia corta</span>. <strong>PresentURL</strong> hace presentaciones solo escribiendo la url</div>
+
 	</header>
 
 	<div class="mb-16">
