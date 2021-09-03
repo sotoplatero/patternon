@@ -4,7 +4,7 @@
 		<h1 class="font-extrabold text-gray-800 text-4xl sm:text-6xl tracking-tighter mb-2">
 			Crea <br>divertidas <span class="text-pink-700">presentaciones</span><br> desde la <span class="text-pink-700">URL</span>
 		</h1>
-		<div class="text-xl sm:text-3xl font-medium text-gray-500 leading-relaxed">Haz una presentación de tu <span class="font-bold">nuevo producto</span>, escribe un <span class="font-bold">mini-tutorial</span>, comparte una <span class="font-bold">historia corta</span>. <strong>PresentURL</strong> hace presentaciones solo escribiendo la url</div>
+		<div class="text-xl sm:text-3xl font-medium text-gray-500 leading-relaxed">Haz una presentación de tu <span class="font-bold">nuevo producto</span>, escribe un <span class="font-bold">mini-tutorial</span>, comparte una <span class="font-bold">historia corta</span>. <strong>DiapoLink</strong> hace presentaciones solo escribiendo la url</div>
 		<a href="/editor" class='text-3xl py-7 font-extrabold hover:text-pink-700 text-pink-600 inline-block'>
 			Crear Presentación &rarr;
 		</a>
@@ -20,7 +20,7 @@
 
 	<div class="mb-8">
 		<h2>Formato</h2>
-		<p>PresentURL utiliza un formato tomando como base el markdown para poder tener Títulos, <strong>negritas</strong>, <em>inclinadas</em>, cuentas de Twitter, enlaces y listas.</p>
+		<p>DiapoLink utiliza un formato tomando como base el markdown para poder tener Títulos, <strong>negritas</strong>, <em>inclinadas</em>, cuentas de Twitter, enlaces y listas.</p>
 		<p>Utiliza el carácter <code>|</code> como separador de lineas dentro de una diapositiva</p>
 		<p>
 			<a href="/show/título 1|contenido de la diapositiva 1/título 2|contenido de la diapositiva/título 3|contenido de la diapositiva 3" target="_blank" class="link">/show/título 1|contenido de la diapositiva 1/título 2|contenido de la diapositiva/título 3|contenido de la diapositiva 3</a>

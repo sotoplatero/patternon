@@ -17,7 +17,7 @@
 </script>
 <div class="space-y-4 text-lg mt-16">
 	<h1>Nueva Presentación</h1>
-	<p>Cree un presentación agregando cada una de las diapositivas.</p>
+	<p>Crea una presentación agregando el texto de cada una de las diapositivas. Puede ir rvisando en la vista previa.</p>
 	{#each slides as slide, index}
 	<div>
 		<div class='text-right'>
