@@ -26,15 +26,14 @@
 			</button>
 		</div>
 		<textarea
-			class="w-full border py-3 px-5 text-gray-600 min-h-48 focus:outline-none overscroll-none text-medium"
-			contenteditable="true"
+			class="w-full border-2 border-gray-300 py-3 px-5 text-gray-600 min-h-48 focus:outline-none overscroll-none text-medium"
 			bind:value={slide}
 			on:input={autoGrow}
 		></textarea>
 	</div>
 	{/each}
 	<div>
-		<button on:click={ () => slides = [...slides,''] } class='border px-6 py-2 font-semibold hover:bg-gray-100 text-gray-600'>
+		<button on:click={ () => slides = [...slides,''] } class='border-2 border-gray-300 px-6 py-2 font-semibold hover:bg-gray-100 text-gray-600'>
 			Adicionar Diapositiva
 		</button>
 		{#if url!=='/show/'}
