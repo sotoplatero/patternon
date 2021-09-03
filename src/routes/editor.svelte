@@ -1,19 +1,52 @@
 <script>
-	import TurndownService from 'turndown'
-	import {onMount} from 'svelte'
+	import { browser } from '$app/env';	
 
-	var turndownService = new TurndownService()
+	let slides = ['']
+	$: url = `/show/${slides.filter(el=>!!el).map(el=>el.trim()).join('/').trim().replace(/\n\s+/g,'\n').replace(/\n+/g,'|')}`
 
-	let html = 'generador de url<br>escriba el contenido de la diapositiva para generar la url'
-	$: slide = turndownService.turndown(html)
-	$: url = `/show/${slide.trim().replace(/\n\s+/g,'\n').replace(/\n+/g,'|')}`
+	function autoGrow(e) {
+		let scroll_height = e.target.scrollHeight
+		e.target.style.height = scroll_height +  2 + 'px'
+	}
+
+	function del(idx) {
+		slides.splice(idx,1)
+		slides = slides
+	}
+
 </script>
-<div class="space-y-4">
-	<a href={url} class="">{url}</a>
-	<div
-		class="border py-2 px-4"
-		contenteditable="true"
-		bind:innerHTML={html}
-	></div>
-	<div>{JSON.stringify(turndownService.turndown(html))}</div>
+<div class="space-y-4 text-lg mt-16">
+	<h1>Nueva Presentación</h1>
+	<p>Cree un presentación agregando cada una de las diapositivas.</p>
+	{#each slides as slide, index}
+	<div>
+		<div class='text-right'>
+			<button on:click={ () => del(index) } class='text-sm text-gray-500 hover:text-red-500'>
+				Eliminar
+			</button>
+		</div>
+		<textarea
+			class="w-full border py-3 px-5 text-gray-600 min-h-48 focus:outline-none overscroll-none text-medium"
+			contenteditable="true"
+			bind:value={slide}
+			on:input={autoGrow}
+		></textarea>
+	</div>
+	{/each}
+	<div>
+		<button on:click={ () => slides = [...slides,''] } class='border px-6 py-2 font-semibold hover:bg-gray-100 text-gray-600'>
+			Adicionar Diapositiva
+		</button>
+		{#if url!=='/show/'}
+			<a href={url} target="_blank" class='px-6 py-2 font-semibold disabled:text-gray-300'>Vista Previa</a>
+		{/if}
+	</div>
+
 </div>
+
+<style>
+	h1{ @apply text-3xl text-gray-800 font-bold mb-2; }
+	/*h3{ @apply text-xl text-gray-800 font-semibold mb-2; }*/
+	p{ @apply text-lg text-gray-700 mt-2; }
+	/*code{ @apply bg-gray-100 px-3 font-mono; }*/
+</style>

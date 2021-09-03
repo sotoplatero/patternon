@@ -5,7 +5,9 @@
 			Crea <br>divertidas <span class="text-pink-700">presentaciones</span><br> desde la <span class="text-pink-700">URL</span>
 		</h1>
 		<div class="text-xl sm:text-3xl font-medium text-gray-500 leading-relaxed">Haz una presentación de tu <span class="font-bold">nuevo producto</span>, escribe un <span class="font-bold">mini-tutorial</span>, comparte una <span class="font-bold">historia corta</span>. <strong>PresentURL</strong> hace presentaciones solo escribiendo la url</div>
-
+		<a href="/editor" class='text-3xl py-7 font-extrabold hover:text-pink-700 text-pink-600 inline-block'>
+			Crear Presentación &rarr;
+		</a>
 	</header>
 
 	<div class="mb-16">
@@ -61,9 +63,11 @@
 		</div>
 	</div>
 
-	<div class="text-center my-20 p-8 bg-blue-100">
-		<h2>Funciona como una Página Web</h2>
-		<p>Puedes usar PresentURL como una página web. Se personaliza el título y la imagen con el texto de la primera diapositiva así que puedes compartir tu presentación en redes sociales. Revisa  como se veria en el validador de <a href="https://cards-dev.twitter.com/validator">Twitter</a></p>
+	<div class="text-center my-20 p-12 bg-pink-100">
+		<!-- <h2>Me cuadra</h2> -->
+		<a href="/editor" class='text-3xl font-extrabold bg-pink-700 text-white py-4 px-5 rounded-xl border inline-block'>
+			Crear Presentación &rarr;
+		</a>
 	</div>
 
 </main>
@@ -73,8 +77,5 @@
 	h3{ @apply text-xl text-gray-800 font-semibold mb-2; }
 	p{ @apply text-lg text-gray-700 mt-2; }
 	code{ @apply bg-gray-100 px-3 font-mono; }
-	pre { 
-		@apply bg-gray-100 p-2 border-l-4 border-yellow-400 font-mono mt-2; 
-	}
 </style>
 

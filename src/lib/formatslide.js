@@ -1,5 +1,3 @@
-import marked from 'marked'
-
 export default  function(slide) {
 
     const replaceUser = '<a href="https://twitter.com/$1" target="_blank" rel="nofollover noopener">$&</a>'

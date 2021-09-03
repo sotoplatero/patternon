@@ -25,17 +25,19 @@
 	export let pattern
 	export let slides = []
 
+	let hasPrev = false
+	let hasNext = false
+
 	onMount(()=>{
+	    hasNext = !!document.querySelector('.translate-x-0').nextSibling;
+
 		document.body.addEventListener("keyup", (e) => {
-			console.log(e)
 			if (e.code === 'ArrowRight') next()
 			if (e.code === 'ArrowLeft') prev()
 	    });
 		document.body.focus()
 	})
 
-	let hasPrev = false
-	let hasNext = true
 	function prev() {
 	    let activeSlide = document.querySelector('.translate-x-0');
 	    let prevSlide = activeSlide.previousSibling;
@@ -81,7 +83,7 @@
 <div class="slides relative w-screen h-screen overflow-hidden " style={pattern}>
 	<div class="slides"  >
 		{#each slides as slide, index (slide)}
-		    <div class="slide absolute inset-0 w-screen h-screen text-white flex items-center justify-center px-20 sm:px-40 transition-all ease-in-out duration-1000 transform text-3xl sm:text-5xl leading-snug bg-transparent { !index ? 'translate-x-0' : 'translate-x-full'} " >
+		    <div class="slide absolute inset-0 w-screen h-screen text-white flex items-center justify-center px-20 sm:px-52 transition-all ease-in-out duration-1000 transform text-3xl sm:text-5xl sm:leading-normal bg-transparent { !index ? 'translate-x-0' : 'translate-x-full'} " >
 		    	<div class="">
 			    	{@html slide}
 		    	</div>
