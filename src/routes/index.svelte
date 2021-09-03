@@ -20,7 +20,9 @@
 		<h2>Formato</h2>
 		<p>PresentURL utiliza un formato tomando como base el markdown para poder tener Títulos, <strong>negritas</strong>, <em>inclinadas</em>, cuentas de Twitter, enlaces y listas.</p>
 		<p>Utiliza el carácter <code>|</code> como separador de lineas dentro de una diapositiva</p>
-		<a href="/show/titulo|incluye **negritas**|utiliza *inclinadas*/titulo 2|promociona tu @cuenta en Twitter|puedes agregar un enlace a tu dominio.com" target="_blank" class="link">/show/titulo|incluye **negritas**|utiliza *inclinadas*/titulo 2|promociona tu @cuenta en Twitter|puedes agregar un enlace a tu dominio.com</a>
+		<p>
+			<a href="/show/título 1|contenido de la diapositiva 1/título 2|contenido de la diapositiva/título 3|contenido de la diapositiva 3" target="_blank" class="link">/show/título 1|contenido de la diapositiva 1/título 2|contenido de la diapositiva/título 3|contenido de la diapositiva 3</a>
+		</p>
 	</div>
 
 	<div class="space-y-8">
