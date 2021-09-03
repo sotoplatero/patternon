@@ -17,7 +17,7 @@
 </script>
 <div class="space-y-4 text-lg mt-16">
 	<h1>Nueva Presentación</h1>
-	<p>Crea una presentación agregando el texto de cada una de las diapositivas. Puede ir rvisando en la vista previa.</p>
+	<p>Crea una presentación agregando el texto de cada una de las diapositivas. Puedes ir revisando en la vista previa.</p>
 	{#each slides as slide, index}
 	<div>
 		<div class='text-right'>
@@ -34,7 +34,7 @@
 	{/each}
 	<div>
 		<button on:click={ () => slides = [...slides,''] } class='border-2 border-gray-300 px-6 py-2 font-semibold hover:bg-gray-100 text-gray-600'>
-			Adicionar Diapositiva
+			+ Diapositiva
 		</button>
 		{#if url!=='/show/'}
 			<a href={url} target="_blank" class='px-6 py-2 font-semibold disabled:text-gray-300'>Vista Previa</a>
