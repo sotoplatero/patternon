@@ -16,14 +16,15 @@
     }	
 </script>
 <script>
+	import { page } from '$app/stores';
 	import './_slide.postcss'
 	import { onMount } from 'svelte'
-	import { page } from '$app/stores'
-	import Partner from './_partner.svelte'
+	import Footer from './_inc/footer.svelte'
 
 	export let title
 	export let pattern
 	export let slides = []
+	let params = $page.params.slides
 
 	let hasPrev = false
 	let hasNext = false
@@ -100,5 +101,5 @@
 			&rarr;
 		</button>
 	{/if}
-	<Partner class="absolute bottom-0 left-0 w-full m-2"/>
+	<Footer {params} class="absolute bottom-0 left-0 w-full m-2"/>
 </div>
