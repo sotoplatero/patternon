@@ -1,3 +1,12 @@
+<svelte:head>
+	<meta property="og:title" content="DiapoLink - Crea divertidas presentaciones desde la URL">
+    <meta property="og:image" content="https://cdn.statically.io/og/theme=dark/DiapoLink - Crea divertidas presentaciones desde la URL.jpg"  />
+
+	<!-- Twitter -->
+	<meta property="twitter:title" content="DiapoLink - Crea divertidas presentaciones desde la URL">
+    <meta property="twitter:image" content="https://cdn.statically.io/og/theme=dark/DiapoLink - Crea divertidas presentaciones desde la URL.jpg"  />
+</svelte:head>
+
 <main>
 	<header class="py-28">
 

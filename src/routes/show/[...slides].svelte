@@ -4,7 +4,7 @@
     export async function load({page, fetch}) {
 
     	let slides = page.params.slides.replace(/\-/g,' ').split('/')
-    	const title = slides[0]
+    	const title = slides[0].split('|')[0]
 		slides = slides.map( el => formatSlide(el))
 
 		const pattern = getPattern()

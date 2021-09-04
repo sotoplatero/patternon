@@ -1,7 +1,22 @@
+<script context="module">
+	import formatSlide from '$lib/formatslide'	
+	import getPattern from '$lib/pattern'
+    export async function load({page, fetch}) {
+
+    	let slides = page.params.slides.replace(/\-/g,' ').split('/')
+		// slides = slides.map( el => formatSlide(el))
+
+		return {
+			props: { slides }
+		}
+
+    }	
+</script>
+
 <script>
 	import { browser } from '$app/env';	
 
-	let slides = ['']
+	export let slides = ['']
 	$: url = `/show/${slides.filter(el=>!!el).map(el=>el.trim()).join('/').trim().replace(/\n\s+/g,'\n').replace(/\n+/g,'|')}`
 
 	function autoGrow(e) {
@@ -36,8 +51,14 @@
 		<button on:click={ () => slides = [...slides,''] } class='border-2 border-gray-300 px-6 py-2 font-semibold hover:bg-gray-100 text-gray-600'>
 			+ Diapositiva
 		</button>
-		{#if url!=='/show/'}
+		{#if slides.join().trim() !==''}
+
+			<a class="inline-block border-2 border-gray-300 px-6 py-2 font-semibold hover:bg-gray-100 text-gray-600" href="https://twitter.com/intent/tweet?text={encodeURIComponent(slides[0].trim())}&url=diapo.link{url}" target="_blank">
+				Tweet
+			</a>
+
 			<a href={url} target="_blank" class='px-6 py-2 font-semibold disabled:text-gray-300'>Vista Previa</a>
+
 		{/if}
 	</div>
 
