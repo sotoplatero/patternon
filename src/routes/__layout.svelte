@@ -12,7 +12,9 @@
 	<a href="/">
 		<h1 class="text-xl sm:text-3xl py-4 font-bold flex items-center">
 			<img src="/logo.png" class="w-10 h-10 rounded-md mr-2" alt="">	
-			<span class="text-gray-700">Diapo</span><span class="text-pink-700 font-extrabold">Link</span>
+			<span class="text-gray-700">
+				PatternSAS
+			</span>
 		</h1>
 	</a>
 
