@@ -1,14 +1,18 @@
-import getPattern from '$lib/patterns'
+import {getPattern} from '$lib/patterns'
+import {getColors} from '$lib/colors'
 
 export async function get({ params }) {
-	const { bg, color, name } = params
+	let { bg, color, name } = params
+
+	if (/light|dark/g.test(bg)) {
+		({bg,color} = getColors({bg,color}))
+	}
 	const pattern = getPattern({name,color,bg})
 	
 	return {
 		headers: { 
-		  'Content-Type': 'text/css',
 		  'Cache-Control':'public, max-age=31536000, immutable',      
-		},
+		},		
 		body: getPattern({name,color,bg})
 	};
 }

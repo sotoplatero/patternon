@@ -1,5 +1,5 @@
-import getPattern from '$lib/patterns'
-import getColors from '$lib/colors'
+import { getPattern } from '$lib/patterns'
+import { getColors } from '$lib/colors'
 
 export async function get({ params }) {
 	let { bg, color, name } = params
