@@ -7,17 +7,19 @@ export async function get({ params }) {
 	const names = name.split('.')
 
 	if (/light|dark/g.test(bg)) {
-		({bg,color} = getColors({bg,color}))
+		( { bg, color } = getColors({ bg, color }) )
 	}
+
 	const css = (names.length > 1) 
-		? names.map( name => `.pattern-${name} { ${ getPattern({ name, color, bg }) } }` ).join('\n')
-		: `.pattern { ${ getPattern({ name, color, bg }) } }`
+		? names.map( name => ({
+			[name]: getPattern({name,color,bg})
+		}))
+		: { pattern: getPattern({ name, color, bg }) }
 
 	return {
 		headers: { 
-		  'Content-Type': 'text/css',
 		  'Cache-Control':'public, max-age=31536000, immutable',      
-		},
+		},		
 		body: css
 	};
 }
